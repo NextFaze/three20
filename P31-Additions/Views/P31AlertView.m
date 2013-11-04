@@ -215,7 +215,7 @@ const static CGFloat kButtonHeight = 40.0;
 	{
 		UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake( 10.0, yPos, 260.0, _titleSize.height )];
 		label.lineBreakMode = UILineBreakModeWordWrap;
-		label.textAlignment = UITextAlignmentCenter;
+		label.textAlignment = NSTextAlignmentCenter;
 		label.numberOfLines = 10;
 		label.shadowColor = RGBCOLOR( 15, 15, 15 );
 		label.shadowOffset = CGSizeMake( 0, -1 );
@@ -235,7 +235,7 @@ const static CGFloat kButtonHeight = 40.0;
 	{		
 		UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake( 10.0, yPos, 260.0, _bodySize.height )];
 		label.lineBreakMode = UILineBreakModeWordWrap;
-		label.textAlignment = UITextAlignmentCenter;
+		label.textAlignment = NSTextAlignmentCenter;
 		label.numberOfLines = 20;
 		label.text = _body;
 		label.font = TTSTYLEVAR(alertBodyFont);

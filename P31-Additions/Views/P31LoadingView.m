@@ -80,7 +80,7 @@ static UIImage *doneImage;
 		_label.text = message;
 		_label.textColor = TTSTYLEVAR(loadingViewTextColor);
 		_label.backgroundColor = [UIColor clearColor];
-		_label.textAlignment = UITextAlignmentCenter;
+		_label.textAlignment = NSTextAlignmentCenter;
 		_label.lineBreakMode = UILineBreakModeWordWrap;
 		_label.numberOfLines = 2;
 		_label.font = [UIFont boldSystemFontOfSize:[UIFont labelFontSize]];
