@@ -152,25 +152,25 @@ def lint_project(project_path, options):
 	
 	# Iterate through and lint each of the files that have been modified since we last ran
 	# the linter, unless we're forcelinting, in which case we lint everything.
-	for filename in filenames:
-		mtime = os.path.getmtime(filename)
-		
-		# If the filename isn't in the lint data, we have no idea when it was last modified so
-		# we'll run the linter anyway.
-		if not forcelint and filename in mtimes:
-			# Is it older or unchanged?
-			if mtime <= mtimes[filename]:
-				# Yeah, let's skip it then.
-				continue
-
-		# The beef.
-		if lint(filename, options):
-			# Only update the last known modification time if there weren't any errors.
-			mtimes[filename] = mtime
-		else:
-			print "If you would like to disable the lint tool, please read the instructions in config.template in the root of the Three20 project"
-			if filename in mtimes:
-				del mtimes[filename]
+	#for filename in filenames:
+	#	mtime = os.path.getmtime(filename)
+	#	
+	#	# If the filename isn't in the lint data, we have no idea when it was last modified so
+	#	# we'll run the linter anyway.
+	#	if not forcelint and filename in mtimes:
+	#		# Is it older or unchanged?
+	#		if mtime <= mtimes[filename]:
+	#			# Yeah, let's skip it then.
+	#			continue
+#
+#		# The beef.
+#		if lint(filename, options):
+#			# Only update the last known modification time if there weren't any errors.
+#			mtimes[filename] = mtime
+#		else:
+#			print "If you would like to disable the lint tool, please read the instructions in config.template in the root of the Three20 project"
+#			if filename in mtimes:
+# 				del mtimes[filename]
 	
 	# Write out the lint data once we're done with this project. Thanks, pickle!
 	if tempdir:
